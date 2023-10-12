@@ -1,6 +1,8 @@
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="120" height="205"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-plain-wordmark.svg" width="120" height="205"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="120" height="205" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="120" height="205"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-plain-wordmark.svg" width="120" height="205"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="120" height="205" />             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original.svg" width="120" height="205" />             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width="120" height="205" />
+          
+          
 
-# Projeto ER Departamento Pessoal
+# Project ER Baratie Restaurant Oficial
 
 >  Construindo uma API REST com banco de dados usando Java e Spring Boot para o projeto final do módulo.
 
@@ -13,37 +15,13 @@
   - Spring Tool Suite (STS)
   - Insomnia
 
-## Regras
-
-O aluno deverá construir uma aplicação Java, usando os conceitos apresentados em sala usando as tecnologias do ecossistema Spring.
-
-Pontos que serão OBRIGATÓRIOS para a entrega do trabalho.
-
-- Diagrama de classes da solução;
-- Arquivo Insomnia com exemplos de todas as chamadas de API’s da aplicação;
-- Documentação das API’s no Swagger
-- Software rodando corretamente;
-- Lista de Requisitos funcionais/Requisitos não funcionais/Regras de negócio;
-- Cobertura de código de no mínimo 50%;
-- Persistência de dados em Postgres;
-- Uso do Flyway para gerenciamento das Migrations;
-- Uso do Maven para gerenciamento das dependências e estrutura do projeto
-- PLUS: Deploy no RailWay, conforme tutorial: [***\*Como configurar o springboot e postgresSQL no Railway\****](https://www.notion.so/Como-configurar-o-springboot-e-postgresSQL-no-Railway-301bdf4514fe49eb88fb082298aa8a2a?pvs=21)
-
-Não estão elencados acima porém também são pré requisitos:
-
-- Qualidade de código
-- Normalização de banco de dados
-
 
 
 # Tema
 
 ------
 
-O tema do trabalho será definido pelo aluno, porém assim como a liberdade criativa na definição dos temas o aluno é responsável é responsável por aquilo que planejou (te tornas eternamente responsável por aquilo que cativas).
-
-Neste caso, estamos falando de um início de projeto de Departamento pessoal, com as entidades Usuário e Departamento.
+Esta aplicação é um back-end de um restaurante chamado Baratie. 
 
 
 
@@ -55,33 +33,26 @@ Vamos construir um pequeno sistema (API REST) de usuários e departamentos, com 
 - Buscar um usuário pelo seu id
 - Inserir um novo usuário
 
-![Image](https://raw.githubusercontent.com/devsuperior/java-web-spring-2022/main/img/dominio.png "Modelo conceitual")
+![domain-model](https://github.com/edsonsreis/Baratie-Restaurant-Project-SpringBoot3-JPA/assets/83223751/da864a48-5d5c-4243-9fd0-00cc0004b6f3 "Domain Model")
 
-### Desenvolvimento moderno: relacional -> objeto -> json
+![domain-instance](https://github.com/edsonsreis/Baratie-Restaurant-Project-SpringBoot3-JPA/assets/83223751/846d3a6c-8fc9-43d3-9de1-f5b434b1452a)
 
-![Image](https://raw.githubusercontent.com/devsuperior/java-web-spring-2022/main/img/objetos.png "Objetos")
+
+
+![logical-layers](https://github.com/edsonsreis/Baratie-Restaurant-Project-SpringBoot3-JPA/assets/83223751/a2ea4e0d-0a71-4675-9276-305685f7e946 "Logical Layers")
+
+
 
 ### Passos do Projeto
 
-- Criar o projeto
-- Diagrama de classes da solução
-- Implementar o modelo de domínio
-- Uso do Maven para gerenciamento das dependências 
-- Mapeamento objeto-relacional com JPA
-- Configurar o banco de dados H2
-- Criar os endpoints da API REST Usuário e Departamento
-  - Usuário e Departamento: GET (BUSCAR)
-  - Usuário e Departamento: GET BY ID (BUSCAR por ID)
-  - Usuário e Departamento: GET (BUSCAR)
-  - Usuário e Departamento: POST (INSERIR)
-  - Usuário e Departamento: DELETE (DELETAR)
-  - Usuário e Departamento: UPDATE (ATUALIZAR)
+- Criar o projeto Spring Boot Java 
+-  Implementar modelo de domínio 
+- Estruturar camadas lógicas: resource, service, repository 
+- Configurar banco de dados de teste (H2) 
+- Povoar o banco de dados  CRUD - Create, Retrieve, Update, Delete 
+- Tratamento de exceções 
 
-- Testes Unitários com no mínimo 50% [Não realizado]
-- Documentação das APIs no Swagger
-- Persistência de dados em Postgres [Por enquanto feito em h2]
-- Uso do Flyway para gerenciamento das Migrations [Não realizado]
-- PLUS: Deploy no RailWay, conforme tutorial. [Não realizado]
+
 
 #### Configurações do banco de dados
 
