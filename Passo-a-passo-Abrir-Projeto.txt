@@ -1,0 +1,13 @@
+Passos para abrir esse projeto:
+
+1- Abrir a pasta do projeto: C:\Users\edsom\Documents\ws-project-baratie-oficial\application\Documents
+
+2- Abrir o curso do DevSuperior na Udemy
+
+3- Abrir o STS com o ws-project-baratie-oficial
+
+4- Abrir o gitbash here na pasta
+
+5- Abrir o projeto em http://localhost:8080/
+
+6- Abrir o insomnia
