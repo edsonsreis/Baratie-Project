@@ -1,0 +1,14 @@
+Passo-a-Passo Git:
+
+Criando o Projeto no GIT:
+1- git init
+2- git add .
+3- git commit -m "Project Created"
+4- git branch -M main
+5- git remote add origin https://github.com/edsonsreis/Baratie-Restaurant-Project-SpringBoot3-JPA.git
+6- git push -u origin main
+
+Atualizando o GIT:
+1- git add .
+2- git commit -m "User entity and resource"
+3- git push
