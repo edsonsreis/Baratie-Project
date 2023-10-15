@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import com.restaurantebaratie.application.entities.User;
 import com.restaurantebaratie.application.repositories.UserRepository;
+import com.restaurantebaratie.application.services.exceptions.DatabaseException;
 import com.restaurantebaratie.application.services.exceptions.ResourceNotFoundException;
 
 @Service
@@ -30,7 +32,23 @@ public class UserService {
 	}
 	
 	public void delete(Long id) {
-		repository.deleteById(id);
+		try {
+			if(!repository.existsById(id)) throw new ResourceNotFoundException(id);
+			repository.deleteById(id);
+		} catch (ResourceNotFoundException e) {
+			throw new ResourceNotFoundException(id);
+		}catch (DataIntegrityViolationException e) {
+			throw new DatabaseException(e.getMessage());
+		}
+		
+		
+		/* 
+		 * Quando eu precisar capturar um RuntimeException, é só fazer isso:
+		 * catch (RuntimeException e){
+		 * 	e.printStackTrace();
+		 *  }
+		 * */
+		
 	}
 	
 	public User updateData(Long id, User obj) {
