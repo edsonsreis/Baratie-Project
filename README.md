@@ -51,6 +51,10 @@ Vamos construir um pequeno sistema (API REST) de usuários e departamentos, com 
 - Configurar banco de dados de teste (H2) 
 - Povoar o banco de dados  CRUD - Create, Retrieve, Update, Delete 
 - Tratamento de exceções 
+- Falta: 
+  - Migrations
+  - Deploy corretamente no RailWay
+
 
 
 
@@ -89,4 +93,6 @@ https://github.com/edsonsreis/DepPersonal-Project/blob/main/userdept/Insomnia_20
 ### **Swagger**
 
 http://localhost:8080/swagger-ui/index.html
+
+
 
